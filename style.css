@@ -1,0 +1,298 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 22px;
+    color: rgb(243, 243, 243);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #efefef;
+}
+
+
+.page-container {
+    width: 700px;
+    margin: auto;
+    background-color: #252C4A;
+    height: 600px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: -15px 15px 0px 1px #F85174;
+}
+
+
+.progressBar {
+    border: 2px solid #107EEB;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 1px;
+}
+
+
+.bar {
+    border-radius: 20px;
+    background: linear-gradient(90deg, #FC4F6B, #B66DF5);
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+
+.timer {
+    position: relative;
+    z-index: 10;
+    font-size: 90%;
+    margin: 5px 0;
+}
+
+
+main {
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+
+main h3 {
+    color: #939BC5;
+    font-weight: 400;
+    border-bottom: 1px dotted #555;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+.questions-container {
+    width: 500%;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: all 0.4s ease;
+}
+
+
+.single-question {
+    width: 100%;
+}
+
+
+.question {
+    font-size: 130%;
+    color: #efefef;
+}
+
+
+.choices {
+    margin-top: 10px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+.choice {
+    padding: 12px;
+    border: 2px solid #107EEB;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 90%;
+}
+
+
+.user-choice {
+    background-color: #0f69c4;
+}
+
+
+.choice:hover {
+    background-color: #107EEB;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+.next {
+    width: 150px;
+    background-color: #107EEB;
+    padding: 10px;
+    margin: 0  0 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+
+.next:hover {
+    background-color: #166cc2;
+}
+
+
+.start-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 370px;
+    cursor: pointer;
+    width: 250px;
+    margin: auto;
+}
+
+.start-container p {
+    font-size: 180%;
+    font-weight: 300;
+}
+
+
+.start-container i {
+    font-size: 700%;
+    background-color: #107EEB;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: all 0.2s ease;
+}
+
+
+.start-container i:hover {
+    color: rgb(223, 223, 223);
+}
+
+
+.score {
+    text-align: center;
+    width: 110px;
+    margin: auto;
+    height: 110px;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.high-score {
+    background-color: #27AE60;
+}
+
+.low-score {
+    background-color: #e74c3c;
+}
+
+.choice-results {
+    margin-top: 35px;;
+}
+
+
+.choice-result {
+padding: 5px;
+border-radius: 5px;
+margin-bottom: 10px;
+}
+
+
+.correct {
+    background-color: #27ae60;
+}
+
+
+.wrong {
+    background-color: #e74c3c;
+}
+
+.unanswered{
+    background-color: #555;
+}
+
+.choice-result i {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+
+.reset-btn {
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #107EEB;
+    cursor: pointer;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+@media (max-width: 700px){
+    .page-container {
+        width: 100%;
+        margin: 20px;
+        margin-top: 40px;
+        background-color: #252C4A;
+        height: 600px;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: none;
+    }  
+}
+
+
+@media (max-width: 500px){
+    main {
+        height: 80%;
+
+    }
+    .page-container {
+        width: 100%;
+        margin: auto;
+        height: 100vh;
+        padding: 40px;
+        border-radius: 0px;
+        box-shadow: none;
+    }  
+    .next {
+        width: 150px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin:  auto;
+        border-radius: 20px;
+    }
+
+    .start-container {
+        height: 100%;
+    }
+
+    .questions-container {
+        width: 500%;
+        height: 80%;
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        transition: all 0.4s ease;
+    }
+}
