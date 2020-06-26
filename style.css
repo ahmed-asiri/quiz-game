@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -13,9 +14,15 @@ html {
 
 
 body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 100vh;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     background-color: #efefef;
 }
@@ -28,6 +35,7 @@ body {
     height: 600px;
     padding: 40px;
     border-radius: 10px;
+    -webkit-box-shadow: -15px 15px 0px 1px #F85174;
     box-shadow: -15px 15px 0px 1px #F85174;
 }
 
@@ -36,7 +44,11 @@ body {
     border: 2px solid #107EEB;
     border-radius: 20px;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     padding: 1px;
 }
@@ -44,10 +56,12 @@ body {
 
 .bar {
     border-radius: 20px;
+    background: -webkit-gradient(linear, left top, right top, from(#FC4F6B), to(#B66DF5));
     background: linear-gradient(90deg, #FC4F6B, #B66DF5);
     position: absolute;
     left: 0;
     z-index: 0;
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
 
@@ -78,8 +92,12 @@ main h3 {
 .questions-container {
     width: 500%;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
 }
 
@@ -98,8 +116,15 @@ main h3 {
 .choices {
     margin-top: 10px;
     height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
 }
 
@@ -110,6 +135,7 @@ main h3 {
     margin-top: 10px;
     border-radius: 10px;
     cursor: pointer;
+    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     font-size: 90%;
 }
@@ -137,6 +163,7 @@ main h3 {
     margin: 0  0 0 auto;
     text-align: center;
     border-radius: 10px;
+    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
     cursor: pointer;
 }
@@ -148,9 +175,18 @@ main h3 {
 
 
 .start-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 370px;
     cursor: pointer;
@@ -169,6 +205,7 @@ main h3 {
     background-color: #107EEB;
     border-radius: 50%;
     margin-bottom: 10px;
+    -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
 
@@ -184,8 +221,14 @@ main h3 {
     margin: auto;
     height: 110px;
     font-weight: 200;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     border-radius: 50%;
 }
@@ -255,6 +298,7 @@ margin-bottom: 10px;
         height: 600px;
         padding: 40px;
         border-radius: 10px;
+        -webkit-box-shadow: none;
         box-shadow: none;
     }  
 }
@@ -269,15 +313,25 @@ margin-bottom: 10px;
         width: 100%;
         margin: auto;
         height: 100vh;
-        padding: 40px;
+        padding: 20px;
+        padding-bottom: 0;
         border-radius: 0px;
+        -webkit-box-shadow: none;
         box-shadow: none;
     }  
     .next {
         width: 150px;
+        position: relative;
+        top: 40px;
         height: 45px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         margin:  auto;
         border-radius: 20px;
@@ -289,10 +343,17 @@ margin-bottom: 10px;
 
     .questions-container {
         width: 500%;
-        height: 80%;
+        height: 70%;
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+        -webkit-transition: all 0.4s ease;
         transition: all 0.4s ease;
+    }
+    html {
+        font-size: 17px;;
     }
 }
