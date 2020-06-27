@@ -77,25 +77,7 @@ function startTimer() {
         let time = Number(timer.textContent);
         timer.textContent = time - 1;
 
-        if(time === 60){
-            height = "50%";
-            barTop = "10px";
-        }else if(time === 59){
-            height = "60%";
-            barTop = "7px";
-        }else if(time === 58){
-            height = "70%";
-            barTop = "6px";
-        }else if(time === 57){
-            height = "80%";
-            barTop = "4px";
-        }else if(time === 56){
-            height = "90%";
-            barTop = "2px";
-        }else{
-            height = "100%";
-            barTop = "0px";
-        }
+
 
         if(time === 1){
             stopTimer();
@@ -105,9 +87,6 @@ function startTimer() {
 
     barID = setInterval(function(){
         let bar = document.querySelector(".bar");
-        bar.style.height = height;
-        bar.style.top = barTop;
-        
         barWidth = Number(bar.style.width.split("%")[0]);
         bar.style.width = `${0.16667 + barWidth}%`;
     },100);

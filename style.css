@@ -51,11 +51,14 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     padding: 1px;
+    overflow: hidden;
 }
 
 
 .bar {
-    border-radius: 20px;
+    height: 100%;
+    top: 0;
+    border-radius: 0px;
     background: -webkit-gradient(linear, left top, right top, from(#FC4F6B), to(#B66DF5));
     background: linear-gradient(90deg, #FC4F6B, #B66DF5);
     position: absolute;
@@ -307,6 +310,7 @@ margin-bottom: 10px;
 @media (max-width: 500px){
     main {
         height: 80%;
+        overflow-y: scroll;
 
     }
     .page-container {
